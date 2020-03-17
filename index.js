@@ -102,10 +102,11 @@ Baby.prototype.play = function() {
 const babyRuth = new Baby ({
   name: 'Ruth',
   age: 3,
-  favoriteToy: 'rattle',
-})
+  favoriteToy: 'rattle'
+});
 
 console.log(babyRuth);
+babyRuth.play();
 
 /* 
   TASK 4
