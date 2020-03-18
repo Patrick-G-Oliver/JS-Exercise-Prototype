@@ -88,9 +88,9 @@ Car.prototype.fill = function(gallons) {
         + Should return a string "Playing with x", x being the favorite toy.
 */
 
-function Baby(babyStats) {
-  Person.call(this, babyStats);
-  this.favoriteToy = babyStats.favoriteToy;
+function Baby(name, age, favoriteToy) {
+  Person.call(this, name, age);
+  this.favoriteToy = favoriteToy;
 }
 
 Baby.prototype = Object.create(Person.prototype);
@@ -106,16 +106,16 @@ const babyRuth = new Baby ({
 });
 
 console.log(babyRuth);
-babyRuth.play();
+console.log(babyRuth.play());
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window/Global Oject Binding: 
+  2. Implicit Binding:
+  3. New Binding:
+  4. Explicit Binding: 
 */
 
 
