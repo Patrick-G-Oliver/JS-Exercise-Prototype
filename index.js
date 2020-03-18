@@ -112,10 +112,28 @@ console.log(babyRuth.play());
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. Window/Global Oject Binding: 
-  2. Implicit Binding:
-  3. New Binding:
-  4. Explicit Binding: 
+
+  1. Window/Global Oject Binding: Being that the 'this' keyword points to the context in which it appears, when a function with the keyword 'this' is called in global scope, 'this' will point to the window (i.e. the entire browser environment) in which JavaScrip itself is running because that is where the function is being called.
+
+  2. Implicit Binding: In this case, when a method on an object is called (e.g. anObj.add2(4)) the object that is to the left of the dot (in the above example, anObj) is what the 'this' keyword is referring to from within the method itself (e.g. 
+  const anObj = {
+    adder: 2,
+    add2: function(num) {
+    return this.adder + num;
+    }
+  }
+  ).
+
+  3. New Binding: When the 'this' keyword appears on a property creators of a constructor function it refers to the new object (i.e. each particular, specific object) that will be created by the constructor function 
+  (e.g. 
+  function Houseplant(origin, species) {
+    this.color: origin;
+    this.species: species;
+  };
+  ).
+
+  4. Explicit Binding: Here, the 'this' keyword is directed to refer to a substitute object by the .call or .apply function, thereby replacing the content of an orginal object (making 'this''s reference 'explicitly' defined).
+
 */
 
 
